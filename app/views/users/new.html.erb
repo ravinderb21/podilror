@@ -1,19 +1,22 @@
-<% @page_title = "Registration" %>
+<% @page_title = "User Registration" %>
 <div class="row">
-	<div class="panel panel-primary">
-	  <div class="panel-heading">
-	    <h3 class="panel-title">User Registration</h3>
-	  </div>
-	  <div class="panel-body">
+	<div class="col-md-8">
 
-		<%= form_for(@user) do |f| %>
+		<div class="card">
+			<div class="card-header">
+		  	User Registration</h3>
+		  </div>
+		  <div class="card-block">
+		  	<p class="card-text">Please fill the following</p>
+		  		
+				<%= form_for(@user) do |f| %>
 
-			<%= render(:partial => 'form', :locals => {:f => f}) %>
+					<%= render(:partial => 'form', :locals => {:f => f}) %>
 
-			<button type="submit" class="btn btn-default">Submit</button>
+					<button type="submit" class="btn btn-default">Submit</button>
 
-		<% end %>
+				<% end %>
+			</div>
 		</div>
 	</div>
 </div>
-

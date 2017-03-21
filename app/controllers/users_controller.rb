@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  layout 'user'
+  layout 'main'
 
   def index
 
