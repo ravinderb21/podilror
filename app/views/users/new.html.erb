@@ -4,16 +4,16 @@
 
 		<div class="card">
 			<div class="card-header">
-		  	User Registration</h3>
+		  	Please fill the following form</h3>
 		  </div>
 		  <div class="card-block">
-		  	<p class="card-text">Please fill the following</p>
+		  	<p class="card-text"></p>
 		  		
 				<%= form_for(@user) do |f| %>
 
 					<%= render(:partial => 'form', :locals => {:f => f}) %>
 
-					<button type="submit" class="btn btn-default">Submit</button>
+					<button type="button" class="btn btn-primary">Primary</button>
 
 				<% end %>
 			</div>
