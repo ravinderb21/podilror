@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   layout 'main'
 
   def index
-
+    @users = User.all
   end
   
   def new
@@ -20,10 +20,20 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+    @user = Users.find(params[:id])
+  end
+
   def edit
   end
 
   def update
+  end
+
+  def delete
+  end
+
+  def destroy
   end
 
   def deactivate
@@ -32,6 +42,6 @@ class UsersController < ApplicationController
   private 
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :email, :username, :password)
+    params.require(:user).permit(:first_name, :last_name, :email, :username, :password, :avatar)
   end
 end

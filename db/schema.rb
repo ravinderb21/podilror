@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170319045247) do
+ActiveRecord::Schema.define(version: 20170322004605) do
 
   create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string   "category",   limit: 50
@@ -29,13 +29,17 @@ ActiveRecord::Schema.define(version: 20170319045247) do
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.string   "first_name",      limit: 30
-    t.string   "last_name",       limit: 50
-    t.string   "email",                      default: "", null: false
-    t.string   "username",        limit: 15
+    t.string   "first_name",          limit: 30
+    t.string   "last_name",           limit: 50
+    t.string   "email",                          default: "", null: false
+    t.string   "username",            limit: 15
     t.string   "password_digest"
-    t.datetime "created_at",                              null: false
-    t.datetime "updated_at",                              null: false
+    t.datetime "created_at",                                  null: false
+    t.datetime "updated_at",                                  null: false
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
 end
