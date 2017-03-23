@@ -1,10 +1,20 @@
 <% @page_title = "All users" %>
-<div class="row">
-	<div class="col-md-12">
+<div class="container">
 	<% @users.each do |user| %>
-		<%= image_tag user.avatar.url %>
-		<%= image_tag user.avatar.url(:medium) %>
-		<%= image_tag user.avatar.url(:thumb) %>
+		<div class="row">
+					<div class="col-2">
+						<%= image_tag user.avatar.url(:thumb) %>
+					</div>
+					<div class="col-6">
+						<%= user.first_name + " " + user.last_name %><br>
+						<%= user.email %>
+					</div>
+		</div>
+		<div class="row">
+			<div class="col-2">
+				Edit
+			</div>
+		</div>
 	<% end %>
-	</div>
 </div>
+		
