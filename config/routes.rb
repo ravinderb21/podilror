@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
-	resources :users 
+	resources :users do
+		member do
+			get :delete
+		end
+	end
   # get 'users/new'
 
   # get 'users/edit'

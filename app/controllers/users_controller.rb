@@ -21,7 +21,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = Users.find(params[:id])
+    @user = User.find(params[:id])
   end
 
   def edit
@@ -31,9 +31,15 @@ class UsersController < ApplicationController
   end
 
   def delete
+    @user = User.find(params[:id])
   end
 
   def destroy
+    @user = User.find(params[:id])
+    @user.avatar = nil
+    @user.destroy
+    redirect_to(users_path)
+    flash[:notice] = "User deleted successfuly!"
   end
 
   def deactivate

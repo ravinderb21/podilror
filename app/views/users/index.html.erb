@@ -2,17 +2,18 @@
 <div class="container">
 	<% @users.each do |user| %>
 		<div class="row">
-					<div class="col-2">
-						<%= image_tag user.avatar.url(:thumb) %>
-					</div>
-					<div class="col-6">
-						<%= user.first_name + " " + user.last_name %><br>
-						<%= user.email %>
-					</div>
+			<div class="col-2">
+				<%= image_tag user.avatar.url(:thumb) %>
+			</div>
+			<div class="col-6">
+				<%= user.first_name + " " + user.last_name %><br>
+				<%= user.email %>
+			</div>
 		</div>
 		<div class="row">
-			<div class="col-2">
-				Edit
+			<div class="col">
+				<%= link_to("Edit", edit_user_path(user), :class => "btn btn-link") %>
+				<%= link_to("Delete", delete_user_path(user), :class => "btn btn-link") %>
 			</div>
 		</div>
 	<% end %>
