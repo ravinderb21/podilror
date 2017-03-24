@@ -5,19 +5,25 @@
     <div class="row">
       <div class="col-lg-12">
         <h1 class="mt-5"><%= @page_title || 'Podil' %></h1>
-        <div id="main">
-          <% if !flash[:notice].blank? %>
-            <div class="notice">
-              <%= flash[:notice] %>
-            </div>
-          <% end %>
+        <div class="row">
+          <div class="col-lg-12">
+            <% if !flash[:notice].blank? %>
+              <div class="alert alert-success" role="alert">
+                <%= flash[:notice] %>
+              </div>
+            <% end %>
 
-          <div id="content">
-            <%= yield %>
+            <div class="row">
+              <div class="col-lg-12">
+              <%= yield %>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="footer">
-          <p>&copy; All rights reserved!</p>
+        <div class="row">
+          <div class="col-lg-12">
+            <p>&copy; All rights reserved!</p>
+          </div>
         </div>
       </div>      
     </div>
