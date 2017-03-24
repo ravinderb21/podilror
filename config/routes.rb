@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  root 'home#index'
+
+  get 'home/account'
+
+  get 'home/login'
+
+  get 'home/contact'
+
 	resources :users do
 		member do
 			get :delete
