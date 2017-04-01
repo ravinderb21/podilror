@@ -1,0 +1,24 @@
+<% @page_title = "User Login" %>
+<div class="row">
+	<div class="col-md-8">
+    <p class="lead"></p>
+		<div class="card">
+			<div class="card-header">
+		  	Please login below
+		  </div>
+		  <div class="card-block">
+		  	<p class="card-text"></p>
+
+				<%= form_tag(access_attempt_login_path, :method => :post) do %>
+					<%= label_tag(:username) %>
+					<%= text_field_tag(:username, params[:username], :class => 'form-control') %>
+
+					<%= label_tag(:password) %>
+					<%= password_field_tag(:password, params[:password], :class => 'form-control') %>
+
+					<button type="submit" class="btn btn-primary">Submit</button>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>
