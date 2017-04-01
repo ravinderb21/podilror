@@ -13,6 +13,12 @@ Rails.application.routes.draw do
 			get :delete
 		end
 	end
+
+  resources :photos do 
+    member do 
+      get :delete
+    end
+  end
   # get 'users/new'
 
   # get 'users/edit'
