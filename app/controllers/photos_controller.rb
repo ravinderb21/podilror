@@ -1,6 +1,7 @@
 class PhotosController < ApplicationController
 
   layout 'main'
+  before_action :confirm_logged_in
 
   def index
   end
@@ -9,6 +10,7 @@ class PhotosController < ApplicationController
   end
 
   def new
+    @categories = Category.sorted
     @photo = Photo.new
   end
 
