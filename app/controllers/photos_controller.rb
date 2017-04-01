@@ -16,7 +16,7 @@ class PhotosController < ApplicationController
     @photo = Photo.new(photo_params)
     if @photo.save
       flash[:notice] = "Photo successfully uploaded!"
-      redirect_to(photos_path)
+      redirect_to(photo_path)
     else
       flash[:notice] = "Error uploading photo!"
       render('new')
