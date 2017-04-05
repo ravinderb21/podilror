@@ -18,7 +18,7 @@ class PhotosController < ApplicationController
     @photo = Photo.new(photo_params)
     if @photo.save
       flash[:notice] = "Photo successfully uploaded!"
-      redirect_to(photo_path)
+      redirect_to(home_account_path)
     else
       flash[:notice] = "Error uploading photo!"
       render('new')
@@ -34,6 +34,6 @@ class PhotosController < ApplicationController
   private
 
   def photo_params
-    params.require(:photo).permit(:image, :caption)
+    params.require(:photo).permit(:image, :caption, :user_id, :category_id)
   end
 end

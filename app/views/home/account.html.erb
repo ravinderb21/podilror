@@ -1,2 +1,24 @@
-<h1>Home#account</h1>
-<p>Find me in app/views/home/account.html.erb</p>
+<% @page_title = 'My Account' %>
+<div class="col">
+	<div class="row">
+		<div class="col-2">
+			<%= image_tag @user.avatar.url(:thumb), :class => 'img-thumbnail img-fluid' %>
+		</div>
+		<div class="col">
+			<h3>Welcome <%= @user.first_name + ' ' + @user.last_name %></h3>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<p>Your photos:</p>
+			<% @photos.each do |photo| %>
+				<figure class="figure">
+					<%= image_tag photo.image.url(:medium), :class => 'figure-img img-fluid rounded',
+						:alt => photo.caption %>
+					<figcaption class="figure-caption"><%= photo.caption %></figcaption>
+				</figure>
+			<% end %>
+		</div>
+	</div>
+</div>
+
