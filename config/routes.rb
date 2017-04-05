@@ -6,13 +6,15 @@ Rails.application.routes.draw do
 
   get 'home/login'
 
+  post 'home/attempt_login'
+
   get 'home/contact'
 
-  get 'admin', :to => 'access#menu'
-  get 'access/menu'
-  get 'access/login'
-  post 'access/attempt_login'
-  get 'access/logout'
+  # get 'admin', :to => 'access#menu'
+  # get 'access/menu'
+  # get 'access/login'
+  # post 'access/attempt_login'
+  # get 'access/logout'
 
 	resources :users do
 		member do
