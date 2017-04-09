@@ -36,9 +36,14 @@ gem 'bootstrap'
 
 gem 'paperclip', '~> 5.1'
 
+group :development do
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+# 
+  gem 'capistrano', '~> 3.8'
+  gem 'capistrano-rbenv', '~> 2.1'
+  gem 'capistrano-rails', '~> 1.2', '>= 1.2.3'
+end
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
