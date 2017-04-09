@@ -35,6 +35,10 @@ class HomeController < ApplicationController
   end
 
   def logout
+    session[:user_id] = nil
+    session[:username] = nil
+    flash[:notice] = 'Successfuly logged out!'
+    redirect_to('/')
   end
 
   def contact

@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   get 'home/contact'
 
+  get 'home/logout'
+
   # get 'admin', :to => 'access#menu'
   # get 'access/menu'
   # get 'access/login'
