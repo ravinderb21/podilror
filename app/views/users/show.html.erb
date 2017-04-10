@@ -1,20 +1,19 @@
 <% @page_title = "My Account" %>
 <div class="container">
-		<div class="row">
-			<div class="col-2">
-				<%= image_tag @user.avatar.url(:thumb) %>
-			</div>
-			<div class="col-6">
-				<%= @user.first_name + " " + @user.last_name %><br>
-				<%= @user.email %>
-			</div>
+	<div class="row">
+		<div class="col-2">
+			<%= image_tag @user.avatar.url(:thumb) %>
 		</div>
-		<div class="row">
-			<div class="col">
-				<%= link_to("My Photos", '#', :class => "btn btn-link") %>
-				<%= link_to("Edit My Account", '#', :class => "btn btn-link") %>
-			</div>
+		<div class="col-6">
+			<%= @user.first_name + " " + @user.last_name %><br>
+			<%= @user.email %>
 		</div>
-	<% end %>
+	</div>
+	<div class="row">
+		<div class="col">
+			<%= link_to "My Photos", home_account_path, :class => "btn btn-link"  %>
+			<%= link_to "Edit My Account", '#', :class => "btn btn-link" %>
+		</div>
+	</div>
 </div>
 		

@@ -14,7 +14,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:notice] = "User registration successfuly!"
-      redirect_to(user_path(params[:id] => @user.id))
+      redirect_to(user_path(:id => @user.id))
     else
       flash[:notice] = "Registration unsuccessful!"
       render('new')
