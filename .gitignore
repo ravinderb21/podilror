@@ -20,3 +20,6 @@ Capfile
 
 config/database.yml
 config/secrets.yml
+
+# Ignore upload folder
+/public/system
