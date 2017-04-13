@@ -4,7 +4,7 @@ lock "3.8.0"
 set :application, "podilror"
 set :repo_url, "git@github.com:achzodiac/podilror.git"
 
-# set :passenger_restart_with_touch, true
+set :passenger_restart_with_touch, true
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
