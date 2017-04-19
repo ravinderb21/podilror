@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
   layout 'main'
   
-  before_action :confirm_logged_in
+  before_action :confirm_logged_in, :except => [:new, :create]
 
   def index
     @users = User.all
@@ -39,10 +39,15 @@ class UsersController < ApplicationController
 
   def destroy
     @user = User.find(params[:id])
-    @user.avatar = nil
-    @user.destroy
-    redirect_to(users_path)
-    flash[:notice] = "User deleted successfuly!"
+    if @user.id == session[:user_id]
+      flash[:notice] = "Can not delete your own profile!"
+      redirect_to(users_path)
+    else 
+      @user.avatar = nil
+      @user.destroy
+      redirect_to(users_path)
+      flash[:notice] = "User deleted successfuly!"
+    end
   end
 
   def deactivate
