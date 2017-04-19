@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
 
   layout 'main'
+  
+  before_action :confirm_logged_in
 
   def index
     @users = User.all
