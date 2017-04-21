@@ -1,7 +1,7 @@
 <%= error_messages_for(f.object) %>
 
 <div class="form-group">
-
+  <%= f.collection_select(:role, User::ROLES, :to_s, lambda{|i| i.to_s.humanize}) %>
   <%= f.label(:avatar) %>
   <%= f.file_field(:avatar, :class => 'form-control') %>
 

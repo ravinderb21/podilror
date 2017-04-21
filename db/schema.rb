@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170401051809) do
+ActiveRecord::Schema.define(version: 20170421151707) do
 
   create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string   "category",   limit: 50
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 20170401051809) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.string   "role"
   end
 
 end

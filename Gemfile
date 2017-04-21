@@ -36,6 +36,8 @@ gem 'bootstrap'
 
 gem 'paperclip', '~> 5.1'
 
+gem 'cancancan', '~> 1.16'
+
 group :development do
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
