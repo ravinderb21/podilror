@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+  load_and_authorize_resource
+  
   layout 'main'
   
   before_action :confirm_logged_in, :except => [:new, :create]
