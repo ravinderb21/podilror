@@ -47,8 +47,6 @@ class UsersController < ApplicationController
       redirect_to(users_path)
     else 
       @user.avatar = nil
-      @roles = @user.roles
-      @roles.destroy
       @user.destroy
       redirect_to(users_path)
       flash[:notice] = "User deleted successfuly!"
