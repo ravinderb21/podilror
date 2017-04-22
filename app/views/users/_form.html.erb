@@ -3,12 +3,10 @@
 <div class="form-group">
   
   <% for role in Role.all %>
-  <div>
-    <%= check_box_tag "user[role_ids][]", role.id, @user.roles.include?(role) %>
-    <%=h role.role %>
-  </div>
+    <% if role.role == 'user' %>
+      <%= hidden_field_tag "user[role_ids][]", role.id %>
+    <% end %>
   <% end %>
-  <%= hidden_field_tag "user[role_ids][]", "" %>
 
   <%= f.label(:avatar) %>
   <%= f.file_field(:avatar, :class => 'form-control') %>

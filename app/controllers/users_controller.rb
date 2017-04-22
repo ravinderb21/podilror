@@ -18,7 +18,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:notice] = "User registration successfuly!"
-      redirect_to(user_path(:id => @user.id))
+      #redirect_to(user_path(:id => @user.id))
+      redirect_to(root_path)
     else
       flash[:notice] = "Registration unsuccessful!"
       render('new')
@@ -46,6 +47,8 @@ class UsersController < ApplicationController
       redirect_to(users_path)
     else 
       @user.avatar = nil
+      @roles = @user.roles
+      @roles.destroy
       @user.destroy
       redirect_to(users_path)
       flash[:notice] = "User deleted successfuly!"
@@ -58,6 +61,6 @@ class UsersController < ApplicationController
   private 
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :email, :username, :password, :avatar, :role)
+    params.require(:user).permit(:first_name, :last_name, :email, :username, :password, :avatar, role_ids: [])
   end
 end

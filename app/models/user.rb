@@ -4,7 +4,7 @@ class User < ApplicationRecord
 
 	has_many :photos
 	has_many :assignments
-	has_many :roles, :through => :assignments
+	has_many :roles, :through => :assignments, :dependent => :destroy
 	
 	has_attached_file :avatar, styles: { large: "600x600>", medium: "300x300>", thumb: "100x100#" }, 
 		default_url: "/images/:style/missing.png"
