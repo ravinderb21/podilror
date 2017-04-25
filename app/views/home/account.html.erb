@@ -13,8 +13,10 @@
 			<p>Your photos:</p>
 			<% @user.photos.each do |photo| %>
 				<figure class="figure">
-					<%= image_tag photo.image.url(:medium), :class => 'figure-img img-fluid rounded',
-						:alt => photo.caption %>
+					<%= link_to photo_path(photo) do %> 
+						<%= image_tag photo.image.url(:medium), :class => 'figure-img img-fluid rounded',
+							:alt => photo.caption %>
+					<% end %>
 					<figcaption class="figure-caption"><%= photo.caption %></figcaption>
 				</figure>
 			<% end %>
