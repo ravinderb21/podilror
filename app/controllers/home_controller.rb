@@ -31,7 +31,6 @@ class HomeController < ApplicationController
 
   def account
     @user = User.find(session[:user_id])
-    @photos = Photo.where(:user_id => @user.id)
   end
 
   def logout
