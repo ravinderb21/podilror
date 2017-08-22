@@ -1,20 +1,15 @@
 <%= render(:partial => 'application/header') %>
+<p class="lead"></p>
+<% if !flash[:notice].blank? %>
+  <div class="row">
+    <div class="col">
+      <div class="alert alert-primary" role="alert">
+        <%= flash[:notice] %>
+      </div>
+    </div>
+  </div>
+<% end %>
 
-    <!-- Page Content -->
-    <div class="container">
-      <% if !flash[:notice].blank? %>
-        <div class="row">
-          <div class="col">
-            <div class="alert alert-primary" role="alert">
-              <%= flash[:notice] %>
-            </div>
-          </div>
-        </div>
-      <% end %>
-      <%= yield %>
-      <div class="footer">
-        <p>&copy; All rights reserved!</p>
-      </div>   
-    </div><!-- .container -->
-  </body>
-</html>
+<%= yield %>
+
+<%= render(:partial => 'application/footer') %>
