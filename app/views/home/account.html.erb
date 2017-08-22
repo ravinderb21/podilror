@@ -8,7 +8,7 @@
 	<% @user.photos.each do |photo| %>
 		<figure class="figure">
 			<%= link_to photo_path(photo) do %> 
-				<%= image_tag photo.image.url(:medium), :class => 'figure-img img-fluid rounded',
+				<%= image_tag photo.image.url(:medium), :class => 'figure-img img-fluid rounded mr-4',
 					:alt => photo.caption %>
 			<% end %>
 			<figcaption class="figure-caption"><%= photo.caption %></figcaption>
