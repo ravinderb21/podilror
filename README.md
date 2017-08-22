@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple RubyOnRails photos uploading app.
 
-Things you may want to cover:
+I originally built this app in PHP Yii framework but after learning ROR, I was more inclined towards ROR than PHP.
 
-* Ruby version
+Link to app: http://podil.tk/
 
-* System dependencies
+How to use:
 
-* Configuration
+* Register your account
 
-* Database creation
+* Start Uploading
 
-* Database initialization
+Features to come:
 
-* How to run the test suite
+* Ability to add Friends 
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Ability to comment on photos
