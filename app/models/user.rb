@@ -17,6 +17,9 @@ class User < ApplicationRecord
 										:format => EMAIL_REGEX,
 										:uniqueness => true
 
+	validates :password, :presence => true,
+											 :length => { :minimum => 6 }
+
 	def has_role?(role_sym)
   	roles.any? { |r| r.role.underscore.to_sym == role_sym }
 	end
