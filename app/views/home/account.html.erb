@@ -1,26 +1,34 @@
-<% @page_title = 'My Account' %>
-<div class="col">
-	<div class="row">
-		<div class="col-2">
-			<%= image_tag @user.avatar.url(:thumb), :class => 'img-thumbnail img-fluid' %>
-		</div>
-		<div class="col">
-			<h3>Welcome <%= @user.first_name + ' ' + @user.last_name %></h3>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col">
-			<p>Your photos:</p>
-			<% @user.photos.each do |photo| %>
-				<figure class="figure">
-					<%= link_to photo_path(photo) do %> 
-						<%= image_tag photo.image.url(:medium), :class => 'figure-img img-fluid rounded',
-							:alt => photo.caption %>
-					<% end %>
-					<figcaption class="figure-caption"><%= photo.caption %></figcaption>
-				</figure>
-			<% end %>
+<div class="row">
+	<div class="col">
+		<% @page_title = 'My Account' %>
+		<div class="card">
+	  	<div class="card-header">
+	  		Welcome 
+	  	</div>
+	  	<div class="card-body">
+				<div class="row">
+					<div class="col col-md-2">
+						<%= image_tag @user.avatar.url(:thumb), :class => 'img-thumbnail img-fluid' %>
+					</div>
+					<div class="col">
+						<h3><%= @user.first_name + ' ' + @user.last_name %></h3>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<p>Your uploaded photos:</p>
+						<% @user.photos.each do |photo| %>
+							<figure class="figure">
+								<%= link_to photo_path(photo) do %> 
+									<%= image_tag photo.image.url(:medium), :class => 'figure-img img-fluid rounded',
+										:alt => photo.caption %>
+								<% end %>
+								<figcaption class="figure-caption"><%= photo.caption %></figcaption>
+							</figure>
+						<% end %>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
-

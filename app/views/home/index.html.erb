@@ -1,23 +1,25 @@
-<div class="col">
-<% @page_title = '' %>
-  <div class="card">
-    <div class="card-header">
-      Welcome to Podil.
-    </div>
-    <div class="card-body">
-      <div class="clearfix">
-        <%= image_tag 'family.jpg', :class => 'figure-img img-fluid rounded float-right' %>
-        <h2 class="card-title">Share your life <span class="badge badge-info">Moments.</span></h2>
-        <p class="card-text">Sign up and start uploading images.</p>
-        <p class="card-text">Share with your friends and family.</p>
-        <% if session[:user_id] %>
-          <%= link_to 'Upload Photo', new_photo_path, :class => 'btn btn-primary' %>
-          <%= link_to 'My Account', home_account_path, :class => 'btn btn-success' %>
-        <% else %>
-          <%= link_to 'Register', new_user_path, :class => 'btn btn-primary' %>
-          <%= link_to 'Sign In', home_login_path, :class => 'btn btn-success' %>
-        <% end %>
+<div class="row">
+  <div class="col">
+  <% @page_title = '' %>
+    <div class="card">
+      <div class="card-header">
+        Welcome to Podil.
+      </div>
+      <div class="card-body">
+        <div class="clearfix">
+          <%= image_tag 'family.jpg', :class => 'figure-img img-fluid rounded float-right' %>
+          <h2 class="card-title">Share your life <span class="badge badge-info">Moments.</span></h2>
+          <p class="card-text">Sign up and start uploading images.</p>
+          <p class="card-text">Share with your friends and family.</p>
+          <% if session[:user_id] %>
+            <%= link_to 'Upload Photo', new_photo_path, :class => 'btn btn-primary' %>
+            <%= link_to 'My Account', home_account_path, :class => 'btn btn-success' %>
+          <% else %>
+            <%= link_to 'Register', new_user_path, :class => 'btn btn-primary' %>
+            <%= link_to 'Sign In', home_login_path, :class => 'btn btn-success' %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
-</div>  
+</div>

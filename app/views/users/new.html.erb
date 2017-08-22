@@ -1,22 +1,20 @@
 <% @page_title = "User Registration" %>
-<div class="row">
-	<div class="col-md-8">
-    <p class="lead">Register today and start sharing!</p>
-		<div class="card help">
-			<div class="card-header">
-		  	Please fill the following form
-		  </div>
-		  <div class="card-block">
-		  	<p class="card-text"></p>
-		  		
-				<%= form_for @user, :html => { :multipart => true } do |f| %>
+<div class="col">
+  <p class="lead">Register today and start sharing!</p>
+	<div class="card help">
+		<div class="card-header">
+	  	Please fill the following form
+	  </div>
+	  <div class="card-body">
+	  	<p class="card-text"></p>
+	  		
+			<%= form_for @user, :html => { :multipart => true } do |f| %>
 
-					<%= render(:partial => 'form', :locals => {:f => f}) %>
+				<%= render(:partial => 'form', :locals => {:f => f}) %>
 
-					<button type="submit" class="btn btn-primary">Submit</button>
+				<button type="submit" class="btn btn-primary">Submit</button>
 
-				<% end %>
-			</div>
+			<% end %>
 		</div>
 	</div>
 </div>

@@ -24,7 +24,7 @@ class HomeController < ApplicationController
       flash[:notice] = 'User login successful!'
       redirect_to(home_account_path)
     else
-      flash[:notice] = 'Login unsuccessful. Invalid username or password provided'
+      flash[:notice] = 'Login unsuccessful. Invalid username or password provided!'
       render('login')
     end
   end

@@ -1,12 +1,12 @@
-<% @page_title = "Upload photo" %>
 <div class="row">
-	<div class="col-md-8">
+	<div class="col">
+		<% @page_title = "Upload photo" %>
     <p class="lead">Upload new photo!</p>
 		<div class="card">
 			<div class="card-header">
 		  	Please fill the following form
 		  </div>
-		  <div class="card-block">
+		  <div class="card-body">
 		  		
 				<%= form_for @photo, :html => { :multipart => true } do |f| %>
 
