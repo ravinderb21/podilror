@@ -1,13 +1,6 @@
 <%= error_messages_for(f.object) %>
 
 <div class="form-group">
-  
-  <% for role in Role.all %>
-    <% if role.role == 'user' %>
-      <%= hidden_field_tag "user[role_ids][]", role.id %>
-    <% end %>
-  <% end %>
-
   <%= f.label(:avatar) %>
   <%= f.file_field(:avatar, :class => 'form-control', :required => true) %>
 

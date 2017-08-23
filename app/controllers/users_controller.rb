@@ -16,6 +16,8 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    @role = Role.find_by_id(2) # User role
+    @user.roles << @role
     if @user.save
       flash[:notice] = "User registration successfuly!"
       #redirect_to(user_path(:id => @user.id))
