@@ -2,7 +2,7 @@
 
 <div class="jumbotron">
 	<%= image_tag @user.avatar.url(:thumb), :class => 'img-thumbnail img-fluid float-left mr-2' %>
-	<h1 class="display-3">Hello <%= @user.first_name %>!</h1>
+	<h1 class="display-4">Hello <%= @user.first_name %>!</h1>
 	<p class="lead">Here are all your uploaded photos.</p>
 	<hr class="my-4">
 	<% @user.photos.each do |photo| %>
