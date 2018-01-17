@@ -1,5 +1,5 @@
 # config valid only for current version of Capistrano
-lock "3.10.0"
+lock "3.10.1"
 
 set :application, "podilror"
 set :repo_url, "git@github.com:ravinderb21/podilror.git"
