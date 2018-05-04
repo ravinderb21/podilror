@@ -2,7 +2,6 @@
 lock "3.10.2"
 
 set :application, "podilror"
-set :scm, :git
 set :repo_url, "git@github.com:ravinderb21/podilror.git"
 
 set :passenger_restart_with_touch, true
