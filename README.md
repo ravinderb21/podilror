@@ -2,8 +2,6 @@
 
 This is a simple RubyOnRails photos uploading app.
 
-I originally built this app in PHP Yii framework but after learning ROR, I was more inclined towards ROR than PHP.
-
 Link to app: http://podil.tk/
 
 How to use:
